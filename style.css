@@ -1,0 +1,195 @@
+* {
+    overflow: hidden;
+}
+
+#splash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 1s;
+  }
+  
+  #splash img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    margin: 0;
+  }
+  
+
+
+#splash.fade {
+	opacity: 0;
+}
+
+body {
+    font-family: 'Libre Baskerville', serif;
+    min-height: 90vh;
+    max-height: 90vh;
+    margin: 0;
+    color: #fff;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    background-image: url("bgbg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    outline: none;
+}
+
+body .logo{
+    display: flex;
+    justify-content: center;
+    height: 800px;
+    margin-top: 20px;
+}
+
+
+body .main {
+    margin-top: 50px;
+    overflow: hidden;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    height: calc(100% - 80px);
+    z-index: 9;
+}
+
+body .main .lyrics {
+    padding: 50vh 0;
+    min-height: calc(100vh - 80px);
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    text-align: center;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+    position: relative;
+}
+
+body .main .lyrics>div {
+    position: relative;
+    font-size: 40px;
+    line-height: 80px;
+    color: #121b129c;
+    font-weight: bold;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+}
+
+body .main .lyrics>div.highlighted {
+    color: #fff;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+body .player {
+    z-index: 10;
+    background: #F9F9F9;
+    color: #000;
+    min-height: 70px;
+    max-height: 140px;
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+
+body .player .audiosrc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (min-width: 310px) and (max-width: 460px) {
+    .songs {
+        font-size: 10px;
+        font-weight: 600;
+    }
+    body .main .lyrics {
+        padding: 50vh 0;
+        min-height: calc(100vh - 80px);
+        width: calc(100% - 40px);
+        margin: 0 10px;
+        text-align: center;
+        -webkit-transition: all 0.25s;
+        transition: all 0.25s;
+        position: relative;
+        word-wrap: break-word;
+        font-size: 14px;
+    }
+    body .main .lyrics>div {
+        position: relative;
+        font-size: 14px;
+        line-height: 30px;
+        color: #121b12;
+        font-weight: bold;
+        -webkit-transition: all 0.25s;
+        word-wrap: break-word;
+        transition: all 0.25s;
+    }
+    body .main .lyrics>div.highlighted {
+        color: #fff;
+        font-weight: bold;
+        word-wrap: break-word;
+        font-size: 14px;
+    }
+    body .player {
+        z-index: 10;
+        background: #F9F9F9;
+        color: #000;
+        min-height: 140px;
+        max-height: 140px;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        flex-direction: row;
+        outline: none;
+        margin-bottom: 20px;
+        margin-right: 14px;
+        margin-left: 14px;
+        border-radius: 30px 0 30px 0;
+    }
+}
+
+@-webkit-keyframes pop-in {
+    0%,
+    95% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+    100% {
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+}
+
+@keyframes pop-in {
+    0%,
+    95% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+    100% {
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+}
+
